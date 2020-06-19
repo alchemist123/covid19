@@ -1,8 +1,8 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-//import Home from 'Components/Home.js';
+import Home from './Components/Home.js';
 import World from './Components/World.js';
-import Header from './Components/Header.js'
+import Header from './Components/Header.js';
 import News from './Components/News.js';
 import {
   BrowserRouter as Router,
@@ -17,8 +17,13 @@ function App() {
       <Router>
         <Header/>
         <Switch>
-         
-            <Route path="World/">
+        <Route exact path="/">
+          <Home/>
+            </Route>
+            <Route path="/Home">
+          <Home/>
+            </Route>
+            <Route path="/World">
           <World/>
             </Route>
             <Route path="/News">
