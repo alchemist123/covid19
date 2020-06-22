@@ -22,8 +22,7 @@ class State extends Component{
         let Keys= Object.keys(this.state.statedata);
 
         return(
-            <div className="row">
-                <div className="col-md-12">
+           <div>
             <Accordion>
                 {
                     Keys.map((itm,ky)=>{
@@ -46,8 +45,8 @@ class State extends Component{
                         }
                         return(  <Card>
                             <Card.Header>
-                               <Accordion.Toggle as={Button} variant="link" eventKey={ky}>
-                                    {itm}&nbsp; &nbsp;  &nbsp; &nbsp;-  &nbsp; &nbsp; &nbsp; &nbsp;Total Cases:{totalConfirmed} &nbsp; &nbsp; &nbsp; &nbsp; Active:{totalActive} &nbsp; &nbsp; &nbsp;  &nbsp;Recovered:{totalRecovered} &nbsp; &nbsp; &nbsp;&nbsp;Deaths:{totalDeath}
+                               <Accordion.Toggle as={Button} variant="primary" eventKey={ky}>
+                                    {itm}&nbsp; &nbsp;  &nbsp; &nbsp;-&nbsp; &nbsp; &nbsp; &nbsp;Details &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-  &nbsp; &nbsp; &nbsp; &nbsp;<span className="btn-dark p-1 mr-2">Total Cases:{totalConfirmed}</span> &nbsp; &nbsp; &nbsp; &nbsp;<span className="btn-warning p-1 mr-2"> Active:{totalActive} </span>&nbsp; &nbsp; &nbsp;  &nbsp;<span className="btn-success p-1 mr-2">Recovered:{totalRecovered}</span> &nbsp; &nbsp; &nbsp;&nbsp;<span className="btn-danger p-1 mr-2">Deaths:{totalDeath}</span>
                                </Accordion.Toggle>
                            </Card.Header>
                            <Accordion.Collapse eventKey={ky}>
@@ -88,7 +87,7 @@ class State extends Component{
                 }
            
             </Accordion>
-            </div>
+            
             </div>
         );
     }
