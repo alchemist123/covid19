@@ -51,10 +51,16 @@ class Home extends Component{
                         </Card>
                        </div>
                         <State/>
+                      
                      
                     </div>
+                   
                 </div>
+                <div className="col-md-12">
+            <state/>
+        </div>
             </div>
+            
         );
     }
 }
