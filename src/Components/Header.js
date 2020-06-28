@@ -1,19 +1,15 @@
 import React, {Component}from 'react';
 import {Navbar,Nav} from 'react-bootstrap';
 import {
-    BrowserRouter as Router,
-    Link,
-    Route,
-    Switch
+    Link
   } from 'react-router-dom';
 class Header extends Component{
     constructor(props)
     {
         super(props);
-
-
     }
     render(){
+      
         return(
             <div>
                 <Navbar bg="dark" variant="dark">
@@ -21,7 +17,6 @@ class Header extends Component{
     <Nav className="mr-auto">
       <Link to="/Home" className="nav-link">India</Link>
       <Link to="/World" className="nav-link">World</Link>
-      <Link to="/News" className="nav-link">News</Link>
     </Nav>
   </Navbar>
             </div>
